@@ -10,7 +10,7 @@ before_install:
   - docker build -t soosungp33/docker-react-app-nginx -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true soosungp33/docker-react-app-nginx npm run test -- --coverage
+  - docker run -e CI=true soosungp33/docker-react-app-nginx npm run test
 
 after_success:
   - echo "Test success"
